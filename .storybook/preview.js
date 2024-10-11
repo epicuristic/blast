@@ -41,8 +41,11 @@ const preview = {
       theme: setDocsTheme(JSON.parse(process.env.STORYBOOK_DOCS_THEME))
     },
     options: {
-      storySort: {
-        order: JSON.parse(process.env.STORYBOOK_SORT_ORDER)
+      storySort: (previous, next) => {
+        const customSort = JSON.parse(process.env.STORYBOOK_SORT_ORDER);
+        const previousIndex = customSort.indexOf(previous.title) !== -1 ? customSort.indexOf(previous.title) : 999;
+        const nextIndex = customSort.indexOf(next.title) !== -1 ? customSort.indexOf(next.title) : 999;
+        return previousIndex === 999 && nextIndex === 999 ? 0 : previousIndex - nextIndex;
       }
     }
   },
