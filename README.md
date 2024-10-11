@@ -65,9 +65,9 @@ Blast uses the `public_path()` to reference any static assets. This means that a
 
 #### `storybook_version`
 
-Allows the use of a different version of Storybook. Blast has only been tested up to 7.1.1.
+Allows the use of a different version of Storybook. Blast has only been tested up to 8.3.5.
 
-Default: `'7.1.1'`
+Default: `'8.3.5'`
 
 #### `storybook_server_url`
 

@@ -5,7 +5,7 @@ const config = {
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
     '@storybook/addon-designs',
-    'storybook-source-code-addon',
+    '@epicuristic/storybook-source-view',
     '@etchteam/storybook-addon-status'
   ],
   docs: {
@@ -20,7 +20,8 @@ const config = {
     options: {
       quiet: true
     }
-  }
+  },
+  staticDirs: [process.env.STORYBOOK_STATIC_PATH]
 };
 
 export default config;

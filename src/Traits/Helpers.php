@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 trait Helpers
 {
-    protected $storybookDefaultVersion = '7.1.1';
+    protected $storybookDefaultVersion = '8.3.5';
 
     protected $storybookInstallVersion;
 
@@ -168,6 +168,8 @@ trait Helpers
             "@storybook/addon-docs@$this->storybookInstallVersion",
             "@storybook/addon-essentials@$this->storybookInstallVersion",
             "@storybook/addon-links@$this->storybookInstallVersion",
+            "@storybook/manager-api@$this->storybookInstallVersion",
+            "@storybook/theming@$this->storybookInstallVersion",
             "storybook@$this->storybookInstallVersion",
             "@storybook/server-webpack5@$this->storybookInstallVersion",
         ];

@@ -3,7 +3,7 @@
 return [
     'enabled' => env('BLAST_ENABLED', true),
 
-    'storybook_version' => '7.1.1',
+    'storybook_version' => '8.3.5',
 
     'storybook_server_url' =>
         env('STORYBOOK_SERVER_HOST', env('APP_URL')) . '/storybook_preview',
